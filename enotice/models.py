@@ -7,7 +7,7 @@ from tinymce import models as tinymce_models
 class Post(models.Model):
     teacher = models.CharField(max_length = 30, default = "HOD")
     title = models.CharField(max_length = 200)
-    description = tinymce_models.HTMLField()
+    description = models.TextField()
     created_date = models.DateTimeField(default = timezone.now)
     published_date = models.DateTimeField(blank = True, null = True)
 
